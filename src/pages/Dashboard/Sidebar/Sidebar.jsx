@@ -103,10 +103,10 @@ export default class Sidebar extends Component {
     console.log("projects length", projects.length);
     return (
       <div className="sidebar">
-        <div className="sidebar-header">
+        {/* <div className="sidebar-header">
           <span>Cod</span>
           <span>In</span>
-        </div>
+        </div> */}
         <div className="project-info" onClick={this.handleProjectInfoClick}>
           <div>
             <div className="project-name">
@@ -130,85 +130,98 @@ export default class Sidebar extends Component {
             this.state.showProjectDropdownContent ? "reveal" : ""
           }`}
         >
-          <div className={`${projects.length >= 3 ? "project-list-scroll" : ""}`}>{projects}</div>
+          <div
+            className={`${projects.length >= 3 ? "project-list-scroll" : ""}`}
+          >
+            {projects}
+          </div>
           <div className="add-project" onClick={this.showProjectModal}>
             <div>Add Project</div>
             <i className="fa fa-plus-circle fa-align" />
           </div>
         </div>
-        <nav className="menu">
-          <ul className="sidebar-menu metismenu" id="sidebar-menu">
-            <li className="active">
-              <NavLink
-                activeStyle={navLinkActiveStyle}
-                to="/dashboard/overview"
-              >
-                <i className="fa fa-tachometer" /> Overview
-              </NavLink>
-            </li>
-            <div className="report-container">
-              <div className="reports">Reports</div>
-            </div>
-            <li className="active open bb">
-              <NavLink activeStyle={navLinkActiveStyle} to="/dashboard/tslint">
-                <i className="fa fa-file-text-o" /> TS Lint Report
-              </NavLink>
-            </li>
-            <li className="active open bb">
-              <NavLink
-                activeStyle={navLinkActiveStyle}
-                to="/dashboard/coverage"
-              >
-                <i className="fa fa-file-text-o" /> Coverage Report
-              </NavLink>
-            </li>
-            <li className="active open">
-              <NavLink
-                activeStyle={navLinkActiveStyle}
-                to="/dashboard/side-report"
-              >
-                <i className="fa fa-file-text-o" /> Side Report
-              </NavLink>
-            </li>
-            <div className="report-container">
-              <div className="reports">Application</div>
-            </div>
-            <li className="active open bb">
-              <a href="">
-                <i className="fa fa-file-text-o" /> Feedback
-              </a>
-            </li>
-            <li className="active open">
-              <a href="">
-                <i className="fa fa-cog" /> Settings
-              </a>
-            </li>
-          </ul>
-        </nav>
-        {this.state.showModal && (
-          <ModalComponent
-            show={this.state.showModal}
-            onHide={this.hideProjectModal}
-          >
-            <ModalHeader>
-              <i className="fa fa-close" onClick={this.hideProjectModal} />
-            </ModalHeader>
-            <ModalBody>
-              <Input
-                type="text"
-                label="Name"
-                placeholder="Name of project"
-                value={projectName}
-                onChange={this.handleNameChange}
-              />
-            </ModalBody>
-            <ModalFooter>
-              <Button bsStyle="primary" onClick={this.addProject}>
-                Add Project
-              </Button>
-            </ModalFooter>
-          </ModalComponent>
-        )}
+        <div
+          className={`nav-container responsive ${
+            this.state.showProjectDropdownContent ? "reveal" : ""
+          }`}
+        >
+          <nav className="menu">
+            <ul className="sidebar-menu metismenu" id="sidebar-menu">
+              <li className="active">
+                <NavLink
+                  activeStyle={navLinkActiveStyle}
+                  to="/dashboard/overview"
+                >
+                  <i className="fa fa-tachometer" /> Overview
+                </NavLink>
+              </li>
+              <div className="report-container">
+                <div className="reports">Reports</div>
+              </div>
+              <li className="active open bb">
+                <NavLink
+                  activeStyle={navLinkActiveStyle}
+                  to="/dashboard/tslint"
+                >
+                  <i className="fa fa-file-text-o" /> TS Lint Report
+                </NavLink>
+              </li>
+              <li className="active open bb">
+                <NavLink
+                  activeStyle={navLinkActiveStyle}
+                  to="/dashboard/coverage"
+                >
+                  <i className="fa fa-file-text-o" /> Coverage Report
+                </NavLink>
+              </li>
+              <li className="active open">
+                <NavLink
+                  activeStyle={navLinkActiveStyle}
+                  to="/dashboard/side-report"
+                >
+                  <i className="fa fa-file-text-o" /> Side Report
+                </NavLink>
+              </li>
+              <div className="report-container">
+                <div className="reports">Application</div>
+              </div>
+              <li className="active open bb">
+                <a href="">
+                  <i className="fa fa-file-text-o" /> Feedback
+                </a>
+              </li>
+              <li className="active open">
+                <a href="">
+                  <i className="fa fa-cog" /> Settings
+                </a>
+              </li>
+            </ul>
+          </nav>
+          {this.state.showModal && (
+            <ModalComponent
+              show={this.state.showModal}
+              onHide={this.hideProjectModal}
+            >
+              <ModalHeader>
+                <i className="fa fa-close" onClick={this.hideProjectModal} />
+              </ModalHeader>
+              <ModalBody>
+                <Input
+                  type="text"
+                  label="Name"
+                  placeholder="Name of project"
+                  value={projectName}
+                  onChange={this.handleNameChange}
+                />
+              </ModalBody>
+              <ModalFooter>
+                <Button bsStyle="primary" onClick={this.addProject}>
+                  Add Project
+                </Button>
+              </ModalFooter>
+            </ModalComponent>
+          )}
+        </div>
       </div>
     );
   }

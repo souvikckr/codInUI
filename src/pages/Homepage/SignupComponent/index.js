@@ -2,7 +2,7 @@ import SignupComponent from "./Signup.jsx";
 import { connect } from "react-redux";
 
 //action creators
-import { userSignUp } from "./../../../modules/auth";
+import { actions } from "./../../../modules/auth";
 
 const mapDispatchToProps = dispatch => {
   return {
