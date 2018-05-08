@@ -5,7 +5,7 @@ script: 'true'
 deploy:
   provider: s3
   access_key_id: AKIAI4ZO66BREZY3542Q
-  secret_access_key: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
+  secret_access_key: dfW8IAFmcfJB1Sfiyh9n9xT+Q0j+Ct6fhEUeNUU/
   bucket: codin-ui
   skip_cleanup: true
   region: eu-west-1
