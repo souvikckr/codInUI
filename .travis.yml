@@ -2,10 +2,10 @@ language: node_js
 node_js:
   - 8.10
 script: 'true'
+before_deploy:
+  - rvm 1.9.3 do gem install aws-sdk -v 2.1.36
 deploy:
   provider: s3
-  edge:
-    branch: s3-backward-compat
   access_key_id: AKIAI4ZO66BREZY3542Q
   secret_access_key:
     secure: "a3/c2ecZtxBrvNaqR/drtAENbT3WQ1DSnmYCTET68n5DacLQL4mdEk9H/t11L24ksfIS1SYEqmT8ZLKFm+HyZoordLjNqMMsvTBEnVF7D2NA5+ho1xiQ14vU1N6OhMtHh4/ZIlpGYPg8t1IeD+bkX7atg3kP60X6SbzccY8fB0xalW7dM4gSWhJhF8Oj4yHHwhqyCz8saXx17TIFDXPbY/ynhHXuIkjuX+DtJGItRc0GW2ykHckTvSCo+j4Saqsm2uu4FLOntMMaX0dxAIPEC2tm9Lj97rUZqxTd1etiS1V+36sm41dd21Glow9UJweSGePa3FvB5/ca/x7SeTTeLgs/IeKmf9HnjSFO07XBTOh8UZkwBU+6rcIZXvetRzCnUz5HITCFysv62+N4XAmQpyLGNGJTYVgz4lvBoMwaQoX0cL0fRlR53t0zVRPE2LCn5LHUEYKS3n9/AcBiiO4X48jwWRe+PGSIWslmS+9hCrFuyq/PE2bizQwtmvWN7gSvrFnA7z6k1rpb5BFu3wSXIqfhLWH7g3A4O7rYLBBWfMR9gAgIfbCTICzha3BsY3v6lu8yB9dieOiT37eq03wacADdAot4UGrOCTiUo8tY3n18CSVxdg9F48z1U0aPW/qplvzlP+SBGeriKIAHgVSIOpKkwRZ1pw8IvOSS+YUoaC0="
