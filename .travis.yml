@@ -1,0 +1,12 @@
+deploy:
+  provider: s3
+  access_key_id: AKIAI4ZO66BREZY3542Q
+  secret_access_key:
+    secure: AVSgmPLUjSfpaHRfc5KGDH+9iH4Nk57NXV1WUfeNS6VydPtB88nXR3vsXawn5utbRCCnazB53plTJtxtyajOHEbkp9ePxxN/t0MKLrZivlHiMYLmOqPfo0TV/dQ9s9v+CZU/IYozTowlLl8D/CX9c5oOCZVLptjHQH+8Ej+r8FG2oh3oQff8KlRCmpmbhWzEy4zkd9g9MA/g5I3Q2UwDmNAdbQ/0B98HTchjSsxxDxdoZVciZ+6/LTrT0rgD76pyXQbA+x97nrWGlUmKdaXILqC7ADAKZOQB86dc7to4W8RhOW3EZri0poyWbQaMRT/J2U1ZGeXDYTOOpFGhBLCPFA5R1qpYSMLzluJ+wek0H3QlFoXdxNSW7M/snXXEWObEvOz3Z4zIucywSWFy3rY3JlFYo2hbxXN3LHrYnEapAijIwwU48umQXn0MTi64hOgtayYwroXocZtQUnU1qwqfV+w2n16FQhVa70B8ksSAg16duycEDvS7sMA48uGUmbH2HPDKK3xgTVznsr0mbV5L1iCGv1WqlsBdKxiKqa1U6i18+zDrQ0KN3H2ROkuoICRtLQAgazlnPRCA6MxzhBpkcpUYVyXxKcMkrrbjHWepoSrW1melT9b9hN0XJbhuLm79ziQLMW9XQyLNMyDKOubCf8Y3vHgnLpYg2+CfR8uIuXg=
+  bucket: codin-ui
+  local-dir: dist
+  upload-dir: dist
+  acl: public_read
+  on:
+    repo: souvikckr/codInUI
+    branch: tslint-souvik
