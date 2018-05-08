@@ -5,8 +5,7 @@ script: 'true'
 deploy:
   provider: s3
   access_key_id: AKIAI4ZO66BREZY3542Q
-  secret_access_key:
-    secure: GE9MRzANdBT8pidfamIWZQBKs46Mp5NZZrPd9xoWlodkeun/gt9DpCMPmJ1M6ZKxtbeW9c+ZQE5Q+dE2Vr0FmFQZRd3xrJEC1SFkTnAkPDAKR3Hzk2++rWKzd2406w52HJ10Q27psmoDToO/R0rlP+78sciWD4Fhk6dT+GJE2YdB0zd4ZD+StdUAiPMmSd7j8hhpCUrAAm6jEFu+hJM3CL3eMXV6d7s4vpvoNFk6Q8NMEJ3YKE2k8kbYy7HxZC7u+eNxv5MieFQtVY6/n7AiD64pulJ4JLK90/0Fa3myzcqOh7LXNCFLQ7zMnSvLGnfA4cYoJk+o67KeYBZ7e71QhPphUTstfTLMlmTxhHM0fLW6Kceq8yGhf26w6wmVk9IM8vimfWSCF4B6rS7sGCDuOtE1ZBXbN8MVO3+G6REUJw+djYFhgpB4gpwzntleJJKkoMVUUsqqSXvk4e8TkFeve+gKo7xi449TVv2yL6TdO+K28dlsFRvw3ASO0WQzofCiNxAg68/qe5koKjOfuhfj7D++MlRLPIizZ3XS5fU3akh1iddJ2A1R+rad6dcCbpiXJ41FHLUkuwfhundFeprQthHFrfE+tft5MdtAU9U+J0YHQry6MGOJERPIBn67qJlTWhjiFoe5H6Xaj9ddzo8PmTAWSMPeU5g79ki9Vm4u5gU=
+  secret_access_key:dfW8IAFmcfJB1Sfiyh9n9xT+Q0j+Ct6fhEUeNUU/
   bucket: codin-ui
   local-dir: dist
   upload-dir: dist
