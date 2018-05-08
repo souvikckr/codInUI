@@ -8,7 +8,7 @@ deploy:
   secret_access_key: dfW8IAFmcfJB1Sfiyh9n9xT+Q0j+Ct6fhEUeNUU/
   bucket: codin-ui
   skip_cleanup: true
-  region: eu-west-1
+  region: eu-east-1
   local-dir: dist
   upload-dir: dist
   acl: public_read
