@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 //Components imports
 import TSLintBar from "./../../../components/TSLintBar";
 import TSLintSunBurst from "./../../../components/TSLintSunBurst";
-import TSLintSummary from "./../../../components/TSLintSummary";
+// import TSLintSummary from "./../../../components/TSLintSummary";
 import TSLintHistory from "./../../../components/TSLintHistory";
 import TSLintHeatmap from "./../../../components/TSLintHeatmap";
 
@@ -17,7 +17,7 @@ export default class TSLintReport extends Component {
       <React.Fragment>
         <Row className="tslint-row-group col-container">
           <Col md={4} className="tslint-col">
-            <TSLintSummary />
+            {/* <TSLintSummary /> */}
           </Col>
           <Col md={8} className="tslint-col">
             <TSLintHistory />

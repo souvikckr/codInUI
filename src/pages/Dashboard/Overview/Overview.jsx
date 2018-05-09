@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 import OverviewGraph from "./../../../components/OverviewGraph";
 import CPICard from "./../../../components/CPICard";
 import RecentSubmits from "./../../../components/RecentSubmits";
-import TSLintSummary from "./../../../components/TSLintSummary";
+// import TSLintSummary from "./../../../components/TSLintSummary";
 import CoverageSummary from "./../../../components/CoverageSummary";
 import OverviewHeatmap from "./../../../components/OverviewHeatmap";
 
@@ -26,7 +26,7 @@ export default class Overview extends Component {
         </Row>
         <Row className="overview-row-group col-container">
           <Col md={5} className="overview-col">
-            <TSLintSummary />
+            {/* <TSLintSummary /> */}
           </Col>
           <Col md={2} className="overview-col">
             <CoverageSummary />
