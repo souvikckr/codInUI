@@ -12,7 +12,6 @@ deploy:
   skip_cleanup: true
   region: us-east-1
   local-dir: dist
-  upload-dir: dist
   acl: public_read
   on:
     repo: souvikckr/codInUI
